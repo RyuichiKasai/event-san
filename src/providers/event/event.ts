@@ -19,7 +19,7 @@ export class EventProvider {
 
     let params = new HttpParams()
       .append('order', '2')
-      .append('count', '10');
+      .append('count', '100');
     keywords.forEach(kwd => params = params.append('keyword', `${kwd}`));
 
     return this.http.get("/connpass/api", { params: params });
